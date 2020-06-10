@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "b598aaac-b166-446b-ab29-d8f6f49d741a",
+		"name": "API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Files in AWS S3 Bucket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/E:/images/spring-annotations-cheat-sheet.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8083/api/v1/aws/uploadFiles?bucketName=testmmmm",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"aws",
+						"uploadFiles"
+					],
+					"query": [
+						{
+							"key": "bucketName",
+							"value": "testmmmm"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS S3 Bucket Creation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8083/api/v1/aws/createBucket?bucketName=buckettest012",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"aws",
+						"createBucket"
+					],
+					"query": [
+						{
+							"key": "bucketName",
+							"value": "buckettest012"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
